@@ -1,4 +1,4 @@
-version: 1
+version: 2
 
 models:
   - name: dim_zones
@@ -125,5 +125,57 @@ models:
         description: ""
 
       - name: payment_type_description
+        data_type: string
+        description: ""
+
+  - name: fact_fhv_trips
+    description: >
+      Contains FHV trip data.
+    columns:
+      - name: tripid
+        data_type: string
+        description: "unique identifier conformed by the combination of dispatching_base_num and pickup time"
+
+      - name: dispatching_base_num
+        data_type: string
+        description: ""
+      
+      - name: pickup_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: dropoff_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: sr_flag
+        data_type: string
+        description: ""
+
+      - name: affiliated_base_number
+        data_type: string
+        description: ""
+      
+      - name: pickup_locationid
+        data_type: int64
+        description: ""
+
+      - name: pickup_borough
+        data_type: string
+        description: ""
+
+      - name: pickup_zone
+        data_type: string
+        description: ""
+
+      - name: dropoff_locationid
+        data_type: int64
+        description: ""
+
+      - name: dropoff_borough
+        data_type: string
+        description: ""
+
+      - name: dropoff_zone
         data_type: string
         description: ""

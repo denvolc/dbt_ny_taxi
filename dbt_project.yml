@@ -40,8 +40,10 @@ models:
     #Applies to all files under models/.../
     staging:
       materialized: view
+      schema: ny_taxi_data
     core:
       materialized: table
+      schema: ny_taxi_data
 
 vars:
   payment_type_values: [1, 2, 3, 4, 5, 6]
